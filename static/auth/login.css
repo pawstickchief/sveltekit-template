@@ -1,0 +1,130 @@
+/* 主容器：左右分栏布局 */
+.login-container {
+    display: flex;
+    height: 100vh; /* 占满整个视口 */
+    background-color: #f0f4f8;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* 左侧图片区域 */
+.login-left {
+    flex: 1.5; /* 图片区域占比较大 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5f2ff;
+}
+
+.login-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 右侧登录表单区域 */
+.login-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative; /* 为了定位小眼睛按钮 */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #007BFF;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.password-group input {
+    padding-right: 40px; /* 为小眼睛按钮预留空间 */
+}
+
+.password-toggle {
+    position: absolute;
+    top: 35px; /* 和输入框对齐 */
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #007BFF;
+    outline: none;
+}
+
+/* 忘记密码链接 */
+.forgot-password {
+    display: block;
+    margin-bottom: 20px;
+    color: #007BFF;
+    text-align: right;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* 登录按钮 */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* 全局防止滚动条 */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
